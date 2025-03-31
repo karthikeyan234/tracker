@@ -66,6 +66,8 @@ defmodule ExpenseTrackerWeb.Router do
     get "/users/settings", UserSettingsController, :edit
     put "/users/settings", UserSettingsController, :update
     get "/users/settings/confirm_email/:token", UserSettingsController, :confirm_email
+
+    resources "/expenses", ExpenseController
   end
 
   scope "/", ExpenseTrackerWeb do
